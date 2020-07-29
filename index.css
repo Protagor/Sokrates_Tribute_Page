@@ -14,7 +14,8 @@ h2 {
 }
 
 h3 {
-    font-size: 2vw;
+    font-size: 175%;
+    margin: 15px;
 }
 
 
@@ -43,6 +44,10 @@ article p {
     margin: 0px;
 }
 
+section p {
+    margin: 20px 25px;
+}
+
 .card {
     display: flex;
     align-items: center;
@@ -68,6 +73,8 @@ article p {
 }
 
 .card:focus {
+    overflow: scroll;
+
     animation-name: display-full-card;
 
     animation-fill-mode: both;
@@ -76,14 +83,14 @@ article p {
 
     flex-direction: column;
 
-    justify-content: space-evenly;
+    justify-content: flex-start;
 }
 
 @keyframes display-full-card {
     0% {
         position: fixed;
         top: 66.5vh;
-        left: 7vw;
+        left: 35vw;
         width: 25vw;
         height: 15vw;
     }
@@ -222,6 +229,11 @@ article p {
     margin-top: 25px;
 }
 
-#tribute-info {
-
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100%;
+    }
 }
