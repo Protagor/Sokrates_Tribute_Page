@@ -68,14 +68,14 @@ section p {
 }
 
 .card:hover {
-    width: 31.25vw;
-    height: 18.75vw;
+    width: 27.5vw;
+    height: 16.5vw;
 }
 
-.card:focus {
+#firstApologyCard:focus {
     overflow: scroll;
 
-    animation-name: display-full-card;
+    animation-name: display-full-card-from-left;
 
     animation-fill-mode: both;
 
@@ -86,11 +86,75 @@ section p {
     justify-content: flex-start;
 }
 
-@keyframes display-full-card {
+@keyframes display-full-card-from-left {
+    0% {
+        position: fixed;
+        top: 66.5vh;
+        left: 5vw;
+        width: 25vw;
+        height: 15vw;
+    }
+
+    100% {
+        position: fixed;
+        top: 5vh;
+        left: 10vw;
+        width: 80vw;
+        height: 90vh;
+    }
+}
+
+#secondApologyCard:focus {
+    overflow: scroll;
+
+    animation-name: display-full-card-from-middle;
+
+    animation-fill-mode: both;
+
+    animation-duration: 1s;
+
+    flex-direction: column;
+
+    justify-content: flex-start;
+}
+
+@keyframes display-full-card-from-middle {
     0% {
         position: fixed;
         top: 66.5vh;
         left: 35vw;
+        width: 25vw;
+        height: 15vw;
+    }
+
+    100% {
+        position: fixed;
+        top: 5vh;
+        left: 10vw;
+        width: 80vw;
+        height: 90vh;
+    }
+}
+
+#thirdApologyCard:focus {
+    overflow: scroll;
+
+    animation-name: display-full-card-from-right;
+
+    animation-fill-mode: both;
+
+    animation-duration: 1s;
+
+    flex-direction: column;
+
+    justify-content: flex-start;
+}
+
+@keyframes display-full-card-from-right {
+    0% {
+        position: fixed;
+        top: 66.5vh;
+        left: 70vw;
         width: 25vw;
         height: 15vw;
     }
@@ -232,6 +296,9 @@ section p {
 @keyframes fade-in {
     0% {
         opacity: 0;
+    }
+    50% {
+        opacity: 25%;
     }
     100% {
         opacity: 100%;
